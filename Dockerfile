@@ -5,9 +5,6 @@ WORKDIR /app
 # Install dependencies required for node-gyp
 RUN apk add --no-cache python3 make g++
 
-# Set environment variables
-ENV VITE_API_BASE_URL=http://host.docker.internal:6969/api
-
 # Copy package files
 COPY package*.json ./
 
