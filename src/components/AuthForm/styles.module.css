@@ -1,0 +1,124 @@
+.wrapper {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem 4rem;
+}
+
+.panel {
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(140deg, #fffaf4, #f6ebdd);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.4rem 2.1rem 2.6rem;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  backdrop-filter: none;
+}
+
+.panel:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 82% 18%, rgba(201, 101, 61, .18), transparent 62%), radial-gradient(circle at 12% 88%, rgba(111, 138, 66, .15), transparent 60%);
+  opacity: .9;
+  pointer-events: none;
+}
+
+.title {
+  margin: 0 0 .35rem;
+  font-size: clamp(1.85rem, 4vw, 2.4rem);
+  font-weight: 600;
+  letter-spacing: .5px;
+  background: linear-gradient(135deg, #c9653d, #6f4a3b 70%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin: 0 0 1.9rem;
+  font-size: .9rem;
+  color: var(--color-text-dim);
+  line-height: 1.4;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .65px;
+  font-weight: 600;
+  color: var(--color-text-dim);
+}
+
+.input {
+  width: 100%;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: .75rem .9rem;
+  color: var(--color-text);
+  font: inherit;
+  font-size: .92rem;
+  letter-spacing: .3px;
+  transition: border-color .3s, background .35s;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .03);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: var(--color-surface);
+}
+
+.error {
+  background: rgba(185, 58, 50, .12);
+  border: 1px solid rgba(185, 58, 50, .4);
+  color: #b93a32;
+  padding: .7rem .85rem;
+  font-size: .75rem;
+  border-radius: var(--radius-sm);
+  line-height: 1.35;
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: .5rem;
+  font-size: .9rem;
+  letter-spacing: .6px;
+}
+
+.toggleBtn {
+  margin-top: 1.35rem;
+  background: none;
+  border: 0;
+  color: var(--color-accent);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .7px;
+  cursor: pointer;
+  padding: .4rem .5rem;
+  text-transform: uppercase;
+  opacity: .9;
+  transition: color .3s, opacity .3s;
+}
+
+.toggleBtn:hover {
+  color: var(--color-accent-alt);
+  opacity: 1;
+}
+
+.toggleBtn:disabled {
+  opacity: .4;
+}

@@ -1,0 +1,13 @@
+/* Minimal app-level helpers after design overhaul */
+
+/* Root layout now handled in index.css; avoid overriding flex column & spacing */
+#root { max-width: none; padding: 0; text-align: initial; }
+
+.pageHeading { margin: 2rem 0 1.25rem; font-size: clamp(1.9rem,4.2vw,2.8rem); font-weight:600; letter-spacing:.5px; background:linear-gradient(135deg,#fff,rgba(255,255,255,.55)); -webkit-background-clip:text; color:transparent; }
+.subtle { color: var(--color-text-dim); }
+
+/* Utility spacing */
+.stack { display:flex; flex-direction:column; gap: var(--stack-gap,1rem); }
+
+/* Fade-in helper (duplicate guarded) */
+.fadeInFast { animation: fadeIn .4s ease; }

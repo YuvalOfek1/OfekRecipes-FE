@@ -1,0 +1,25 @@
+.recipeDetail { max-width: 1000px; margin: 2rem auto 3.5rem; padding: 0 1.25rem; display:flex; flex-direction:column; gap:2.5rem; }
+.header { display:flex; flex-direction:column; gap:1.2rem; }
+@media (min-width: 760px){ .header { flex-direction:row; align-items:flex-start; justify-content:space-between; } }
+.titleBlock { flex:1; }
+.title { margin:0; font-size: clamp(2rem,5vw,3.1rem); background:linear-gradient(135deg,#c9653d,#6f4a3b 70%); -webkit-background-clip:text; color:transparent; letter-spacing:.5px; }
+.meta { margin:.4rem 0 0; font-size:.95rem; color: var(--color-text-dim); }
+.metaLine { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.6rem; }
+.timeBadge { background: var(--color-accent-soft); color:#552d1b; font-size:.65rem; font-weight:600; padding:.3rem .6rem; border-radius:999px; letter-spacing:.5px; }
+.tagChip { background:#efe1d4; color:#6f4a3b; font-size:.6rem; padding:.3rem .55rem; border-radius:999px; font-weight:600; letter-spacing:.5px; }
+.heroWrap { position:relative; border-radius: var(--radius-lg); overflow:hidden; box-shadow: var(--shadow-lg); background: linear-gradient(145deg,#f6ebdd,#fffaf4); }
+.photo { width:100%; display:block; object-fit:cover; max-height:520px; aspect-ratio: 16/9; }
+.contentGrid { display:grid; gap:2.5rem; }
+@media (min-width: 960px){ .contentGrid { grid-template-columns: repeat(2,1fr); gap:3rem 3rem; } }
+.section { background: var(--color-surface); border:1px solid var(--color-border); padding:1.6rem 1.4rem 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); position:relative; overflow:hidden; }
+.section:before { content:''; position:absolute; inset:0; background: radial-gradient(circle at 85% 15%, rgba(201,101,61,.18), transparent 65%); opacity:.6; pointer-events:none; }
+.sectionTitle { margin:0 0 1.1rem; font-size:1.2rem; letter-spacing:.5px; display:flex; align-items:center; gap:.55rem; }
+.markdown { font-size:.95rem; line-height:1.6; color: var(--color-text-dim); }
+.markdown h1,.markdown h2,.markdown h3 { font-family: var(--font-serif); color: var(--color-text); }
+.markdown ul { margin:.75rem 0 1.2rem; padding-left:1.3rem; }
+.markdown li { margin:.4rem 0; }
+.actions { display:flex; gap:.75rem; }
+.secondaryBtn { background: var(--color-accent-soft); color: #552d1b; }
+.secondaryBtn:hover { background: var(--color-accent-alt); color:#fff; }
+.dangerBtn { background: linear-gradient(135deg,#b93a32,#c9653d); }
+.dangerBtn:hover { filter:brightness(.95); }

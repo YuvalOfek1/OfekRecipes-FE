@@ -1,0 +1,84 @@
+:root {
+  /* Warm Italian Village Palette */
+  --color-bg: #f8f2ea; /* parchment cream */
+  --color-bg-alt: #f2e8da;
+  --color-surface: #fffaf4; /* lighter card surface */
+  --color-surface-alt: #f6ebdd; /* subtle contrast */
+  --color-border: #e2d4c3; /* soft edge */
+  --color-border-strong: #c9b49d;
+  --color-accent: #c9653d; /* terracotta */
+  --color-accent-alt: #d9784f;
+  --color-accent-soft: #f2b08a;
+  --color-text: #3d332d; /* deep warm brown */
+  --color-text-dim: #75675f;
+  --color-danger: #b93a32; /* rustic red */
+  --color-success: #6f8a42; /* olive */
+  --color-warning: #c79332;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 2px 4px -2px rgba(90,60,40,.25), 0 1px 3px -1px rgba(90,60,40,.2);
+  --shadow-md: 0 6px 18px -6px rgba(90,60,40,.3);
+  --shadow-lg: 0 14px 40px -10px rgba(90,60,40,.35);
+  --grad-accent: linear-gradient(135deg,#c9653d,#b93a32 60%);
+  --max-width: 1240px;
+  --font-serif: 'Playfair Display', 'Georgia', serif;
+  --font-sans: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  font-weight: 400;
+  color: var(--color-text);
+  background:
+    radial-gradient(circle at 18% 22%, rgba(201,101,61,.08), transparent 60%),
+    radial-gradient(circle at 82% 70%, rgba(111,138,66,.08), transparent 60%),
+    linear-gradient(180deg,#fcf8f1,#f4eadc 68%);
+  background-attachment: fixed;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+
+/* Base resets */
+* { box-sizing: border-box; }
+body { margin:0; min-width:320px; min-height:100vh; display:flex; flex-direction:column; }
+#root { flex:1; display:flex; flex-direction:column; }
+
+h1,h2,h3,h4 { font-family: var(--font-serif); font-weight:600; line-height:1.2; color: var(--color-text); }
+
+button {
+  font-family: var(--font-sans);
+  font-size:.95rem; font-weight:600; letter-spacing:.5px;
+  border:0; border-radius: var(--radius-sm);
+  padding:.7rem 1.15rem; cursor:pointer;
+  background: var(--grad-accent); color:#fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s, box-shadow .35s, filter .3s;
+}
+button:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+button:active { transform: translateY(0); filter: brightness(.93); }
+button[disabled] { opacity:.55; cursor:not-allowed; transform:none; }
+
+/* Links */
+a { color: var(--color-accent); text-decoration:none; font-weight:600; }
+a:hover { color: var(--color-accent-alt); }
+
+/* Inputs */
+input, textarea { font-family: var(--font-sans); }
+
+/* Utility */
+.container { width:100%; max-width: var(--max-width); margin:0 auto; padding: 1.75rem clamp(1rem,3vw,2rem); }
+
+::-webkit-scrollbar { width:10px; }
+::-webkit-scrollbar-track { background: #efe5d9; }
+::-webkit-scrollbar-thumb { background: #d2c2b2; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background:#c3b19e; }
+
+.fadeIn { animation: fadeIn .6s ease; }
+@keyframes fadeIn { from { opacity:0; transform: translateY(6px);} to { opacity:1; transform:none;} }
+
+/* Adjust toast colors (react-hot-toast uses inline style override) */
+/* Dark scheme override removed for warm consistent palette */

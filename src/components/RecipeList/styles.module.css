@@ -1,0 +1,18 @@
+.recipeList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.6rem;
+  margin: 2.5rem 0 3.5rem;
+}
+
+.state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-dim);
+  font-size: .95rem;
+  background: linear-gradient(135deg,#fffaf4,#f6ebdd);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
